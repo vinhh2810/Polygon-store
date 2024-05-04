@@ -11,14 +11,14 @@
             <div class="tabs">
                 <ul class="tab-links">
                     <li class="active"><a href="#tab1" title="">NỘI THẤT</a></li>
-                    <li><a href="#tab2" title="">SOFA</a></li>
+                    <li><a href="#tab2" title="">NGOẠI THẤT</a></li>
                     <li><a href="#tab3" title="">HÀNG TRANG TRÍ</a></li>
                 </ul>
                 <div class="tabContent">
                     <div id="tab1" class="tab active">
                         <div class="group slide">
-                            @if (isset($productsWatch))
-                                @foreach($productsWatch as $product)
+                            @if (isset($productsAccessoriess))
+                                @foreach($productsAccessoriess as $product)
                                     @include('layout.component.product_item',['product'=>$product])
                                 @endforeach
                             @endif
@@ -43,8 +43,8 @@
                     </div>
                     <div id="tab3" class="tab">
                         <div class="group slide">
-                            @if (isset($productsAccessoriess))
-                                @foreach($productsGlass as $product)
+                            @if (isset($productsWatch))
+                                @foreach($productsWatch as $product)
                                     @include('layout.component.product_item',['product'=>$product])
                                 @endforeach
                             @endif
@@ -62,7 +62,7 @@
             </div>
         </div>
     </div>
-    <div id="countCate" class="dn dbmobile-l">
+    <!-- <div id="countCate" class="dn dbmobile-l">
         <div class="wrp">
             <div class="group">
                 <a href="/phu-kien-dong-ho.html" title="Phu kien" class="item">
@@ -71,7 +71,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div id="logoPartner">
         <div class="wrp">
@@ -110,7 +110,7 @@
     <div class="product">
         <div class="wrp">
             <h2 class="titleCate">
-                <a href="/sp/dong-ho-philippe-auguste.html" title="Philippe August">
+                <a href="/san-pham/ban-tra-1" title="Philippe August">
                     <span class="icon"><img data-src="/view/img/icon1.png" alt="Philippe August" class="lazy"
                                             src="/view/lazy.jpg"/></span>
                     BÀN TRÀ
@@ -129,11 +129,11 @@
             <h2 class="titleCate">
                 <a href="/sp/dong-ho-diamond-d.html" title="Diamond D">
                     <span class="icon"><img data-src="/view/img/icon1.png" alt="Diamond D" class="lazy"
-                                            src="/view/lazy.jpg"/></span>Bàn trà
+                                            src="/view/lazy.jpg"/></span>Bàn Ghế Ăn
                 </a>
             </h2>
             <div class="group slide">
-                @foreach($listProduct2 as $list)
+                @foreach($listProduct3 as $list)
                     @include('layout.component.list_product',['list'=>$list])
                 @endforeach
             </div>
@@ -145,13 +145,8 @@
         <div class="wrp">
             <div class="bannerMain">
                 <div class="wImage dnTablet-l">
-                    <a href="/sp/dong-ho-epos-swiss.html" title="EPos Swiss" class="image cover">
+                    <a href="/san-pham/giuong-ngu-2" title="EPos Swiss" class="image cover">
                         <img data-src="/view/img/EP246.jpg" class="lazy" src="/view/lazy.jpg"/>
-                    </a>
-                </div>
-                <div class="wImage dn dbtablet-l">
-                    <a href="/sp/dong-ho-epos-swiss.html" title="Epos" class="image cover">
-                        <img data-src="/view/img/EP246M.jpg" class="lazy" src="/view/lazy.jpg"/>
                     </a>
                 </div>
                 <h2 class="info">
@@ -164,7 +159,7 @@
                 </h2>
             </div>
             <div class="group slide3">
-                @foreach($listProduct3 as $list)
+                @foreach($listProduct2 as $list)
                     @include('layout.component.list_product',['list'=>$list])
                 @endforeach
 
@@ -176,7 +171,7 @@
             <h2 class="titleCate">
                 <a href="/san-pham/giuong-ngu-2" title="Giường ngủ">
                     <span class="icon"><img data-src="/view/img/icon1.png" class="lazy" src="/view/lazy.jpg"/></span>
-                    Giường ngủ
+                    Tủ Quần Áo
                 </a>
             </h2>
             <div class="group slide">
@@ -193,11 +188,11 @@
             <h2 class="titleCate">
                 <a href="/san-pham/quyen-cleo-10-5" title="KHO MẪU VẢI DA" class="">
                     <span class="icon"><img data-src="/view/img/icon1.png" alt="AG" class="lazy" src="/view/lazy.jpg"/></span>
-                    KHO MẪU VẢI DA
+                    Bàn Đầu Giường
                 </a>
             </h2>
             <div class="group slide">
-                @foreach($listProduct5 as $list)
+                @foreach($listProduct6 as $list)
                     @include('layout.component.list_product',['list'=>$list])
                 @endforeach
 
@@ -228,7 +223,7 @@
                 </h3>
             </div>
             <div class="group slide3">
-                @foreach($listProduct6 as $list)
+                @foreach($listProduct5 as $list)
                     @include('layout.component.list_product',['list'=>$list])
                 @endforeach
             </div>

@@ -104,14 +104,14 @@
         <div id="menuMain">
             <ul>
                 <li class="hasChild">
-                    <a href="javascript:" title="Nội thất">Nội thất</a>
+                    <a href="javascript:" title="Nội thất">Phòng Khách</a>
                     <ul>
                         <li>
                             <div class="subMenu" style="width: 250px;">
                                 <div class="group">
                                     <div class="item">
                                         @foreach($category as $listcate)
-                                            @if($listcate->c_cate == 'watch')
+                                            @if($listcate->c_cate == 'living')
                                                 <a href="{{ route('get.category.detail',$listcate->c_slug.'-'.$listcate->id) }}">{{ $listcate->c_name}}</a>
                                             @endif
                                         @endforeach
@@ -122,14 +122,32 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript:" title="Kinh mat thoi trang">SOFA</a>
+                    <a href="javascript:" title="Kinh mat thoi trang">Phòng Ngủ</a>
                     <ul>
                         <li>
                             <div class="subMenu" style="width: 250px;">
                                 <div class="group">
                                     <div class="item">
                                         @foreach($category as $listcate)
-                                            @if($listcate->c_cate == 'glass')
+                                            @if($listcate->c_cate == 'bed')
+                                                <a href="{{ route('get.category.detail',$listcate->c_slug.'-'.$listcate->id) }}">{{ $listcate->c_name}}</a>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="hasChild">
+                    <a href="javascript:" title="Nội thất">Phòng Ăn</a>
+                    <ul>
+                        <li>
+                            <div class="subMenu" style="width: 250px;">
+                                <div class="group">
+                                    <div class="item">
+                                        @foreach($category as $listcate)
+                                            @if($listcate->c_cate == 'dining')
                                                 <a href="{{ route('get.category.detail',$listcate->c_slug.'-'.$listcate->id) }}">{{ $listcate->c_name}}</a>
                                             @endif
                                         @endforeach
@@ -147,7 +165,25 @@
                                 <div class="group">
                                     <div class="item">
                                         @foreach($category as $listcate)
-                                            @if($listcate->c_cate == 'accessories')
+                                            @if($listcate->c_cate == 'decorating')
+                                                <a href="{{ route('get.category.detail',$listcate->c_slug.'-'.$listcate->id) }}">{{ $listcate->c_name}}</a>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="hasChild">
+                    <a href="javascript:" title="Nội thất">Ngoại Thất</a>
+                    <ul>
+                        <li>
+                            <div class="subMenu" style="width: 250px;">
+                                <div class="group">
+                                    <div class="item">
+                                        @foreach($category as $listcate)
+                                            @if($listcate->c_cate == 'exterior')
                                                 <a href="{{ route('get.category.detail',$listcate->c_slug.'-'.$listcate->id) }}">{{ $listcate->c_name}}</a>
                                             @endif
                                         @endforeach
@@ -178,7 +214,7 @@
 </div>
 <!-- <div class="zalo-chat-widget" data-oaid="3317742618024098879" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="300" data-height="300"> </div> -->
 
-<script src="https://sp.zalo.me/plugins/sdk.js"> </script>
+<script src="https://sp.zalo.me/plugins/sdk.js"> </script> 
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>

@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="info">
-            <p>34mm | 10ATM</p>
+            <p><span class="text">Còn lại {{$product->pro_amount}}</span></p>
             <a href="{{ route('get.product.detail',$product->pro_slug.'-'.$product->id )}}" class="name">
                 <h3>{{ $product->pro_name}}</h3>
             </a>
@@ -25,15 +25,11 @@
             </div>
             <div class="price">
                 @if($product->pro_sale)
-                    <p class="new">{{ number_format($product->pro_price - $product->pro_sale,0,',','.') }}đ</p>
+                    <p class="new">{{ number_price($product->pro_price,$product->pro_sale) }}đ</p>
                     <p class="old">{{ number_format($product->pro_price,0,',','.') }}đ</p>
                 @else
                     <p class="new">{{ number_format($product->pro_price,0,',','.') }}đ</p>
                 @endif
-            </div>
-            <div class="count">
-                <div class="bg" style="width: {{ rand(10,70)}}%"></div>
-                <span class="text">Còn lại {{$product->pro_amount}}</span>
             </div>
         </div>
     </div>

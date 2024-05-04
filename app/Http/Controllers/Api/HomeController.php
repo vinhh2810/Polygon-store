@@ -72,7 +72,7 @@ class HomeController extends Controller
             'productsWatch' => $productsWatch,
             'productsGlass' => $productsGlass,
             'productsAccessoriess' => $productsAccessoriess,
-            'title_page' => 'Nhà xinh',
+            'title_page' => 'POLYGON',
             'listProduct1' => $listProduct1,
             'listProduct2' => $listProduct2,
             'listProduct3' => $listProduct3,

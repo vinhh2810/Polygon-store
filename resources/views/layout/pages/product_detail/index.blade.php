@@ -53,10 +53,10 @@
                             <span class="text">Số lượng</span>
                             <span class="num">{{ $product->pro_amount }}</span>
                         </div>
-                        <div class="item">
+                        <!-- <div class="item">
                             <span class="text">Vật liệu</span>
                             <span class="num">Sứ</span>
-                        </div>
+                        </div> -->
                         <div class="item">
                             <span class="text">Kích thước</span>
                             <span class="num">D360 - R360 - C65 mm</span>

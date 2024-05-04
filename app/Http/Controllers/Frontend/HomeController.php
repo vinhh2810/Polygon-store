@@ -15,21 +15,23 @@ class HomeController extends Controller
         $category    =Category::all();
         $product     =Product::all();
         // chọn sản phẩm sắp xếp theo id ( sản phẩm mới)
+        $categories1 = [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15, 19, 20, 22];
         $productsAccessoriess =Product::where('pro_active',1)
-        ->where('pro_category','>',20)
-        ->orderBydesc('pro_pay')
-        ->limit(10)
-        ->get();
+            ->whereIn('pro_category', $categories1)
+            ->orderBydesc('pro_pay')
+            ->limit(10)
+            ->get();
          // chọn sản phẩm sắp xếp theo hot (sản phẩm hot)
+         $categories2 = [23, 18, 8];
          $productsGlass=Product::where('pro_active',1)
-            ->where('pro_category','>',10)
-            ->where('pro_category','<',21)
+            ->whereIn('pro_category', $categories2)
             ->orderBydesc('pro_pay')
             ->limit(10)
             ->get();
         // chọn sản phẩm sắp xếp theo hot (sản phẩm hot)
-        $productsWatch =Product::where('pro_active',1)
-            ->where('pro_category','<',11)
+        $categories3 = [14, 16, 17, 21, 24, 25];
+        $productsWatch = Product::where('pro_active', 1)
+            ->whereIn('pro_category', $categories3)
             ->orderBydesc('pro_pay')
             ->limit(10)
             ->get();

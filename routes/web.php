@@ -1,9 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TranslateController;
+
 
 Route::get('send-message','RedisController@index');
 Route::post('send-message','RedisController@postSendMessage');
+
+Route::post('/translate-gpt', [TranslateController::class, 'translateWithGPT']);
+Route::post('/translate-gg', [TranslateController::class, 'translateWithGG']);
 
 
 Route::get('/data', 'Frontend\HomeController@data'); 
